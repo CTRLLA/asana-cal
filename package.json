@@ -1,0 +1,25 @@
+{
+  "name": "asana-cal-api",
+  "version": "1.0.0",
+  "description": "Asana + Calendar integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CTRLLA/asana-cal.git"
+  },
+  "keywords": [
+    "Asana",
+    "iCal",
+    "Google",
+    "Calendar"
+  ],
+  "author": "ishmaelthedestroyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CTRLLA/asana-cal/issues"
+  },
+  "homepage": "https://github.com/CTRLLA/asana-cal#readme"
+}
