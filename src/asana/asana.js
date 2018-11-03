@@ -5,7 +5,7 @@ import { filterAndReturnTasksWithDate, formatTasks } from "./util";
 export const getTasksInWorkspace = async (
   accessToken: string,
   workspaceId: string
-) => {
+): Promise<Array<Task>> => {
   const client = Client.create().useAccessToken(accessToken);
   const user = await client.users.me();
   const userId = user.id;
@@ -34,13 +34,16 @@ export const getTasksInWorkspace = async (
 export const getTasksWithDateInWorkspace = async (
   accessToken: string,
   workspaceId: string
-) => {
+): Promise<Array<Task>> => {
   const tasks = await getTasksInWorkspace(accessToken, workspaceId);
   const filteredTasks = filterAndReturnTasksWithDate(tasks);
   return filteredTasks;
 };
 
-export const getTasks = async (accessToken: string, workspaceId: string) => {
+export const getTasks = async (
+  accessToken: string,
+  workspaceId: string
+): Promise<Array<Task>> => {
   const tasks = await getTasksWithDateInWorkspace(accessToken, workspaceId);
   const formattedTasks = formatTasks(tasks);
   return formattedTasks;
