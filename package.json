@@ -47,7 +47,8 @@
   ],
   "dependencies": {
     "asana": "^0.16.6",
-    "dotenv": "^6.1.0"
+    "dotenv": "^6.1.0",
+    "sugar": "^2.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
